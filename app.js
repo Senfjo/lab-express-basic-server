@@ -14,6 +14,12 @@ app.use(express.json());
 app.get("/blog", (req, res) => {
   res.sendFile(__dirname + "/views/blog.html");
 });
+
+app.get("/", (req, res) => {
+    res.sendFile(__dirname + "/views/home.html");
+  });
+
+
 app.get("/api/projects", (req, res) => {
   res.json({ projectsJson });
 });
